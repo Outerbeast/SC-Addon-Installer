@@ -1,5 +1,6 @@
 # SC-Addon-Installer
 ![alt text](https://github.com/Outerbeast/SC-Addon-Installer/blob/main/preview.png?raw=true)
+
 Sven Co-op addon installation made easy
 Allows you to quickly install map packs, map-related files, textures or unpack other archived files to your game
 
