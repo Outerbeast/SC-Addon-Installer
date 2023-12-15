@@ -3,7 +3,7 @@ Sven Co-op addon installation made easy
 Allows you to quickly install map packs, map-related files, textures or unpack other archived files to your game
 
 ## Installation
-- Download the application exe
+- [Download the application exe](https://github.com/Outerbeast/SC-Addon-Installer/releases/download/v1.0/SCAddonInstallerv1.0.zip)
 - Run the exe for initial setup, this will search for your Sven Co-op game install 
 
 ## Usage
