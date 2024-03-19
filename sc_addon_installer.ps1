@@ -56,6 +56,12 @@ $btnChangePath.Size = '75, 25'
 $btnChangePath.Text = "Select path"
 $btnChangePath.Add_Click( { ChangePath } )
 
+<# $btnLink = New-Object System.Windows.Forms.Button
+$btnLink.Location = '140, 280'
+$btnLink.Size = '75, 25'
+$btnLink.Text = "Add files"
+$btnLink.Add_Click( { AddDLLink } ) #>
+
 $btnAdd = New-Object System.Windows.Forms.Button
 $btnAdd.Location = '235, 280'
 $btnAdd.Size = '75, 25'
@@ -213,12 +219,10 @@ function Unpack($strArchiveName)
     {
         return
     }
-
+    
     switch( [System.IO.Path]::GetExtension( $strArchiveName ) )
     {
-        ".bsp" { }
-        ".cfg" { }
-        ".res"
+        { @( ".bsp", ".cfg", ".res" ) -contains $_ }
         { 
             Copy-Item -Path $strArchiveName -Destination "$( [PathData]::strAddonsPath )\maps" -Force -Verbose
             break
@@ -230,8 +234,7 @@ function Unpack($strArchiveName)
             break
         }
 
-        ".7z" { }
-        ".rar"
+        { @( ".7z", ".rar" ) -contains $_ }
         {
             if( !( Get-Module -Name 7Zip4PowerShell -ListAvailable ) )
             {
@@ -281,7 +284,18 @@ function Unpack($strArchiveName)
         }
     }
 }
-# Not yet ready for this
+
+<# function AddDLLink
+{
+    $textBox = [System.Windows.Forms.TextBox]@{
+        Location = New-Object System.Drawing.Size( 10, 40 )
+        Size = New-Object System.Drawing.Size( 575, 230 )
+        AcceptsReturn = true
+        Multiline = $true
+        ScrollBars = 'Both'
+    }
+} #>
+
 <# function DownloadAddon($strURL, $strExt)
 {
     $strDownloadedFile = "[PathData]::strAddonsPath\addon.$strExt"
