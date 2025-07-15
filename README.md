@@ -1,3 +1,4 @@
+![alt text](https://github.com/Outerbeast/SC-Addon-Installer/blob/main/preview.png?raw=true)
 # Sven Co-op Addon Installer
 
 A simple addon installer for Sven Co-op, supporting various archive formats and direct downloads.
