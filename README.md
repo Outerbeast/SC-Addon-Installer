@@ -15,7 +15,7 @@ A simple addon installer for Sven Co-op, supporting various archive formats and 
 - Simple, user-friendly Windows Forms interface.
 
 ## Installation
-- Download the application from the **Releases** section
+- Download the application from the [Releases](https://github.com/Outerbeast/SC-Addon-Installer/releases) section
 - Run the exe for initial setup, this will search for your Sven Co-op game install
 
 ## Usage
